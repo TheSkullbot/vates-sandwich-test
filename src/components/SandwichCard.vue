@@ -39,7 +39,6 @@ defineProps<{ sandwich : Sandwich }>();
   padding       : 12px;
   border-radius : 8px;
   background    : #FFFFFF;
-  min-width     : 300px;
 }
 
 h3
@@ -52,6 +51,7 @@ h3
 
 ul
 {
-  margin : 0 0 8px 0;
+  margin       : 0 0 8px 0;
+  padding-left : 24px;
 }
 </style>

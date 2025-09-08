@@ -112,6 +112,7 @@ section
   display         : flex;
   gap             : 8px;
   justify-content : center;
+  margin-bottom   : 12px;
 }
 
 .success
@@ -121,7 +122,6 @@ section
   color         : #155724;
   padding       : 8px;
   border-radius : 6px;
-  margin-top    : 12px;
 }
 
 .warning
