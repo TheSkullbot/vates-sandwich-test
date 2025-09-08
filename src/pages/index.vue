@@ -30,12 +30,11 @@ import { computed, ref, onMounted } from "vue";
 import { useIngredientsStore } from "@/stores/ingredients";
 import { useSandwichesStore } from "@/stores/sandwiches";
 import SandwichCard from "@/components/SandwichCard.vue";
-import type { Sandwich } from "@/types/sandwich";
+import type { BareSandwich, Sandwich } from "@/types/sandwich";
 
 const ingredients = useIngredientsStore();
 const sandwiches  = useSandwichesStore();
 
-type BareSandwich = Omit<Sandwich, "id" | "createdAt" | "name">
 const current        = ref<BareSandwich | null>( null );
 const successMessage = ref<string>( "" );
 

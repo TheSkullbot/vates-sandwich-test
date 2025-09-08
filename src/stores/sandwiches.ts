@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref, watch } from "vue";
-import type { Sandwich } from "@/types/sandwich";
+import type { BareSandwich, Sandwich } from "@/types/sandwich";
 import { STORAGE_KEYS } from "@/types/sandwich";
 import { readJSON, writeJSON } from "@/utils/storage";
 
@@ -9,12 +9,11 @@ export const useSandwichesStore = defineStore( "sandwiches", () => {
   
   watch( sandwiches, ( val ) => writeJSON( STORAGE_KEYS.SANDWICHES, val ), { deep : true } );
   
-  function save( s : Omit<Sandwich, "id" | "createdAt" | "name"> )
+  function save( s : BareSandwich )
   {
     const input = window.prompt( "Donnez un nom à votre recette :" );
     const name  = input && input.trim() ? input.trim() : "Sandwich anonyme :(";
-
-    const now = Date.now();
+    const now   = Date.now();
     sandwiches.value.unshift( { ... s, id : String( now ), createdAt : now, name } );
   }
   

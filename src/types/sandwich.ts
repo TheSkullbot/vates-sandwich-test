@@ -11,6 +11,8 @@ export interface Sandwich
   createdAt : number;
 }
 
+export type BareSandwich = Omit<Sandwich, "id" | "name" | "createdAt">;
+
 export interface IngredientsState
 {
   bread : string[];
@@ -21,10 +23,10 @@ export interface IngredientsState
 
 export const defaultIngredients : IngredientsState = {
   bread   : [
-    "Pain Italien",
-    "Pain Parmesan Origan",
-    "Pain Blé complet",
-    "Pain Blé Blanc",
+    "Italien",
+    "Parmesan Origan",
+    "Blé complet",
+    "Blanc",
     "Wrap"
   ],
   sauce   : [
