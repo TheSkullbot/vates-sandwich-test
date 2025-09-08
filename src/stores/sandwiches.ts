@@ -9,10 +9,13 @@ export const useSandwichesStore = defineStore( "sandwiches", () => {
   
   watch( sandwiches, ( val ) => writeJSON( STORAGE_KEYS.SANDWICHES, val ), { deep : true } );
   
-  function save( s : Omit<Sandwich, "id" | "createdAt"> )
+  function save( s : Omit<Sandwich, "id" | "createdAt" | "name"> )
   {
+    const input = window.prompt( "Donnez un nom à votre recette :" );
+    const name  = input && input.trim() ? input.trim() : "Sandwich anonyme :(";
+
     const now = Date.now();
-    sandwiches.value.unshift( { ... s, id : String( now ), createdAt : now } );
+    sandwiches.value.unshift( { ... s, id : String( now ), createdAt : now, name } );
   }
   
   function remove( id : string )

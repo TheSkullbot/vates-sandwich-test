@@ -10,9 +10,9 @@
 
     <div class="grid">
       <IngredientManager category="bread" title="Pains" placeholderSingular="un pain" />
-      <IngredientManager category="sauce" title="Sauces" placeholderSingular="une sauce" />
-      <IngredientManager category="cheese" title="Fromages" placeholderSingular="un fromage" />
       <IngredientManager category="filling" title="Garnitures" placeholderSingular="une garniture" />
+      <IngredientManager category="cheese" title="Fromages" placeholderSingular="un fromage" />
+      <IngredientManager category="sauce" title="Sauces" placeholderSingular="une sauce" />
     </div>
 
     <div class="footer">

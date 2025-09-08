@@ -35,7 +35,7 @@ import type { Sandwich } from "@/types/sandwich";
 const ingredients = useIngredientsStore();
 const sandwiches  = useSandwichesStore();
 
-type BareSandwich = Omit<Sandwich, "id" | "createdAt">
+type BareSandwich = Omit<Sandwich, "id" | "createdAt" | "name">
 const current        = ref<BareSandwich | null>( null );
 const successMessage = ref<string>( "" );
 

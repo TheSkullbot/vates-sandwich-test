@@ -3,6 +3,7 @@ export type IngredientCategory = "bread" | "sauce" | "cheese" | "filling"
 export interface Sandwich
 {
   id : string;
+  name : string;
   bread : string;
   sauce : string;
   cheese : string;

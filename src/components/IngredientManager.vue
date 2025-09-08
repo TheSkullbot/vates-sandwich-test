@@ -50,6 +50,7 @@ function clearError()
 function add()
 {
   const cleaned = newItem.value.trim();
+
   // Empty name
   if( !cleaned )
   {

@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <h3>
-      Sandwich
+      {{ sandwich.name || "Sandwich" }}
       <slot name="actions" />
     </h3>
 
@@ -10,18 +10,18 @@
         <strong>Pain :</strong> {{ sandwich.bread }}
       </li>
       <li>
-        <strong>Sauce :</strong> {{ sandwich.sauce }}
+        <strong>Garniture :</strong> {{ sandwich.filling }}
       </li>
       <li>
         <strong>Fromage :</strong> {{ sandwich.cheese }}
       </li>
       <li>
-        <strong>Garniture :</strong> {{ sandwich.filling }}
+        <strong>Sauce :</strong> {{ sandwich.sauce }}
       </li>
     </ul>
 
     <small v-if="sandwich.createdAt">
-      Créé le: {{ new Date( sandwich.createdAt ).toLocaleString() }}
+      Créé le : {{ new Date( sandwich.createdAt ).toLocaleString() }}
     </small>
   </div>
 </template>
